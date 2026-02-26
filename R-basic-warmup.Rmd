@@ -1,0 +1,261 @@
+---
+title: "R and RStudio Basics for Complete Beginners"
+author: "Nurlan Kerimov"
+output: html_document
+---
+
+# Welcome
+
+This lesson is for students who are completely new to R, RStudio, and programming.
+
+You will learn the basics step by step:
+
+- R Markdown document structure
+- Variables
+- Running code in the correct order
+- Data types
+- Arithmetic operations
+- if/else conditions
+- Iterators (`for`, `while`)
+- Functions
+
+## How to run code in RStudio
+
+In this file, code appears inside **code chunks** (the gray boxes).
+
+- Run one line or selected lines: select code and press `Cmd + Enter` (Mac) or `Ctrl + Enter` (Windows).
+- Run the current chunk: click the green **Run/Play** button on the top-right of the chunk.
+- Run all chunks: use the **Run** menu in RStudio.
+
+Execution order matters. If line 2 uses a variable from line 1, you must run line 1 first.
+
+---
+
+# 1) R Markdown document structure
+
+An `.Rmd` file usually has:
+
+1. A YAML header at the top (between `---` and `---`)
+2. Markdown text for explanation
+3. R code chunks for executable code
+
+Example chunk:
+
+```{r}
+message("Hello from a code chunk")
+```
+
+Try it yourself: click the green **Run** button in the chunk above.
+
+---
+
+# 2) Variables
+
+A **variable** stores a value in memory.
+In R, we usually assign values with `<-`.
+
+```{r}
+name <- "Aylin"
+age <- 22
+is_student <- TRUE
+
+name
+age
+is_student
+```
+
+Try it yourself: change `name` and `age`, then run the chunk again.
+
+---
+
+# 3) Running code line by line (order is important)
+
+This example will fail if you run only the last line first.
+
+```{r}
+first_number <- 10
+second_number <- 5
+total <- first_number + second_number
+
+total
+```
+
+If you run only `total` before defining `first_number` and `second_number`, R will show an error.
+
+Use the green **Run** button to run the whole chunk when you are not sure whether earlier lines were executed.
+
+---
+
+# 4) Data types
+
+Common beginner data types in R:
+
+- Character (text): `"hello"`
+- Numeric (number): `42` or `3.14`
+- Logical (boolean): `TRUE` or `FALSE`
+
+```{r}
+city <- "Baku"       # character
+temperature <- 18.5  # numeric
+is_raining <- FALSE  # logical
+
+class(city)
+class(temperature)
+class(is_raining)
+```
+
+Try it yourself: create one more variable for each type.
+
+---
+
+# 5) Arithmetic operations
+
+Basic arithmetic operators:
+
+- `+` add
+- `-` subtract
+- `*` multiply
+- `/` divide
+- `^` power
+
+```{r}
+x <- 12
+y <- 3
+
+x + y
+x - y
+x * y
+x / y
+x ^ y
+```
+
+Try it yourself: change `x` and `y` and predict outputs before running.
+
+---
+
+# 6) if/else conditions
+
+Use `if` and `else` to make decisions.
+
+```{r}
+score <- 72
+
+if (score >= 60) {
+  message("Pass")
+} else {
+  message("Fail")
+}
+```
+
+Try it yourself: set `score <- 45` and run again.
+
+---
+
+# 7) Iterators: for and while
+
+## for loop
+
+A `for` loop repeats code for each value in a sequence.
+
+```{r}
+for (i in 1:5) {
+  print(i)
+}
+```
+
+## while loop
+
+A `while` loop runs while a condition stays true.
+
+```{r}
+counter <- 1
+
+while (counter <= 3) {
+  print(counter)
+  counter <- counter + 1
+}
+```
+
+Try it yourself: change loop limits and run again.
+
+## foreach-style in R (using `lapply`)
+
+In many languages, people say "foreach". In base R, a beginner-friendly equivalent is often `lapply`.
+
+```{r}
+numbers <- c(2, 4, 6)
+
+lapply(numbers, function(n) {
+  n * 10
+})
+```
+
+This applies the same function to each element (similar to a foreach idea).
+
+---
+
+# 8) Functions
+
+A **function** is reusable code that can take inputs and return outputs.
+
+```{r}
+add_tax <- function(price, tax_rate) {
+  final_price <- price * (1 + tax_rate)
+  return(final_price)
+}
+
+add_tax(100, 0.18)
+```
+
+Try it yourself: call `add_tax(250, 0.10)`.
+
+---
+
+# Practice mini-task
+
+Complete this short exercise:
+
+1. Create a variable `daily_hours` with a number.
+2. Use `if/else` to print `"Busy day"` if `daily_hours >= 8`, otherwise `"Light day"`.
+3. Use a `for` loop to print numbers from 1 to `daily_hours`.
+4. Write a function `double_value()` that returns input multiplied by 2.
+
+```{r}
+# 1
+daily_hours <- 6
+
+# 2
+if (daily_hours >= 8) {
+  message("Busy day")
+} else {
+  message("Light day")
+}
+
+# 3
+for (n in 1:daily_hours) {
+  print(n)
+}
+
+# 4
+double_value <- function(x) {
+  x * 2
+}
+
+double_value(daily_hours)
+```
+
+---
+
+# Recap
+
+You practiced:
+
+- R Markdown structure
+- Variables and data types
+- Arithmetic
+- Code execution order
+- if/else logic
+- Loops (`for`, `while`, and foreach-style with `lapply`)
+- Functions
+
+If something does not work, first run earlier lines or run the full chunk with the green **Run/Play** button.
