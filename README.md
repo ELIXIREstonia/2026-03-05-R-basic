@@ -63,4 +63,4 @@ Take a look at our follow-up course on how to create compelling visualisations u
 
 License: see `LICENSE`.
 
-Feedback form is here: https://forms.gle/KaFiPPvuY4HY376G9
+Feedback form is here: https://forms.gle/omANJ76dXUJt6XSy9
