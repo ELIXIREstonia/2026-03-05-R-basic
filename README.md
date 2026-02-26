@@ -1,9 +1,12 @@
-# 2025-09-01-R-basic
+# 2026-03-05-R-basic
 
 ELIXIR-EE training course on R and RStudio basic usage. Targeted to learners who have no or very little prior experience with R and RStudio.
 
+Repository: https://github.com/ELIXIREstonia/2026-03-05-R-basic
+
 The main instructional materials are the R Markdown documents in this repository:
 
+- `R-basic-warmup.Rmd` — warm-up material for complete beginners
 - `R-basic.Rmd` — learner-facing workshop material
 - `R-basic-instructor.Rmd` — instructor notes and solutions
 
@@ -45,7 +48,7 @@ Learning outcomes for the training:
 
 ### Course materials (at a glance)
 
-- Authors / date: Priit Adler & Nurlan Kerimov (2025-09-01).
+- Authors / date: Priit Adler & Nurlan Kerimov (2026-03-05).
 - How to read data: `readr::read_csv()`, `readr::read_tsv()`, and `readxl::read_excel()` (examples shown in `R-basic.Rmd`).
 - Tidyverse overview and common verbs taught: `%>%` (pipe), `filter()`, `mutate()`, `select()`, `rename()`, `arrange()`, `group_by()`, `summarize()`, `left_join()` (joins) and related helpers.
 - Conditional operations and new columns: `case_when()` examples for creating categories (age groups, etc.).

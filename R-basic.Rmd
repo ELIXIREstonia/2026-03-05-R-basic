@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R"
 author: "Priit Adler & Nurlan Kerimov"
-date: "2025-09-01"
+date: "2026-03-05"
 output: html_document
 ---
 
@@ -11,7 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction to Rstudio UI
 
-You can find this and the data files from ELIXIREstonia github. <https://github.com/ELIXIREstonia/2025-09-01-R-basic>.
+You can find this and the data files from ELIXIREstonia github. <https://github.com/ELIXIREstonia/2026-03-05-R-basic>.
+
+If you are completely new to programming and R, start with `R-basic-warmup.Rmd` before continuing this material.
 
 RStudio is an integrated development environment (IDE) tailored for efficient and user-friendly R programming. Once launched, the RStudio UI presents itself in a segmented manner, primarily divided into four main panes.
 
@@ -29,7 +31,7 @@ see: <https://rstudio.github.io/cheatsheets/html/rstudio-ide.html> for more deta
 
 R is a popular open-source programming language and environment for statistical computing and graphics. In this section, we will cover basic R syntax, functions, data structures, and data manipulation using the tidyverse.
 
-You can find this and the data files from ELIXIREstonia github. `https://github.com/ELIXIREstonia/2025-09-01-R-basic`.
+You can find this and the data files from ELIXIREstonia github. `https://github.com/ELIXIREstonia/2026-03-05-R-basic`.
 
 There is follow up course on R and ggplot2 <https://github.com/ELIXIREstonia/2024-10-09-R-visualisation> that is meant as logical continuation after you have finished this document.
 
